@@ -3,9 +3,9 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import UserList from "@/components/user-list"; // pastikan path file sesuai
+import AuthorList from "@/components/author-list"; // pastikan path file sesuai
 
-export default function UserPage() {
+export default function AuthorPage() {
   return (
     <SidebarProvider
       style={
@@ -25,7 +25,7 @@ export default function UserPage() {
               <p className="text-muted-foreground">Berikut adalah daftar Authors Perpustakaan Digital</p>
 
               <div className="border rounded-lg p-4 bg-muted">
-                <UserList />
+                <AuthorList />
               </div>
             </div>
           </div>
