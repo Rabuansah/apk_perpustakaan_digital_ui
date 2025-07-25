@@ -34,23 +34,23 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "dashboard",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
       title: "Users",
-      url: "dashboard/Users",
+      url: "/dashboard/users",
       icon: IconUsers,
     },
     {
-      title: "Books",
-      url: "#",
-      icon: IconChartBar,
+      title: "Authors",
+      url: "/dashboard/authors",
+      icon: IconFolder,
     },
     {
-      title: "Authors",
-      url: "#",
-      icon: IconFolder,
+      title: "Books",
+      url: "/dashboard/books",
+      icon: IconChartBar,
     },
     {
       title: "Loans",

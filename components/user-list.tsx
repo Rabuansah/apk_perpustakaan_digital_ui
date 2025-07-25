@@ -1,29 +1,12 @@
 "use client";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useEffect, useState } from "react";
 import { createUser, deleteUser, fetchUsers, updateUser } from "@/lib/api";
 import { Button } from "./ui/button";
 import UserFormModal from "./UserFormModal";
 import { toast } from "sonner";
-import {
-  AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogCancel,
-  AlertDialogAction,
-} from "@/components/ui/alert-dialog";
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from "@/components/ui/alert-dialog";
 
 interface User {
   id: number;
@@ -79,10 +62,7 @@ export default function UserTable() {
     <div className="rounded-md border p-4 space-y-4">
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-semibold">Daftar User</h2>
-        <UserFormModal
-          onSubmit={handleCreate}
-          trigger={<Button>+ Tambah</Button>}
-        />
+        <UserFormModal onSubmit={handleCreate} trigger={<Button>+ Tambah</Button>} />
       </div>
       <Table>
         <TableHeader>
@@ -117,20 +97,12 @@ export default function UserTable() {
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>
-                        Yakin ingin menghapus user ini?
-                      </AlertDialogTitle>
-                      <AlertDialogDescription>
-                        Tindakan ini tidak bisa dibatalkan. Data akan hilang
-                        permanen.
-                      </AlertDialogDescription>
+                      <AlertDialogTitle>Yakin ingin menghapus user ini?</AlertDialogTitle>
+                      <AlertDialogDescription>Tindakan ini tidak bisa dibatalkan. Data akan hilang permanen.</AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Batal</AlertDialogCancel>
-                      <AlertDialogAction
-                        onClick={() => handleDelete(user.id)}
-                        className="bg-red-600 hover:bg-red-700"
-                      >
+                      <AlertDialogAction onClick={() => handleDelete(users.id)} className="bg-red-600 hover:bg-red-700">
                         Ya, Hapus
                       </AlertDialogAction>
                     </AlertDialogFooter>
